@@ -54,24 +54,24 @@
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/moment.js"></script>
 <script>
-  function getValue(e){
-    return $(e).val()
-  }
-  function getParams(){
-    return {
-      title:getValue('#title'),
-      name:[getValue('#firstName'),getValue('#middleName'),getValue('#lastName')].join(' '),
-      url:getValue('#url'),
-      date:getValue('#date')
+    function getValue(e){
+        return $(e).val()
     }
-  }
+    function getParams(){
+        return {
+            title:getValue('#title'),
+            name:[getValue('#firstName'),getValue('#middleName'),getValue('#lastName')].join(' '),
+            url:getValue('#url'),
+            date:getValue('#date')
+        }
+    }
 
-  function submit() {
-    const list = JSON.parse(sessionStorage.getItem('list')) || []
-    list.push(getParams())
-    sessionStorage.setItem('list',JSON.stringify(list))
-    window.history.back()
-  }
+    function submit() {
+        const list = JSON.parse(sessionStorage.getItem('list')) || []
+        list.push(getParams())
+        sessionStorage.setItem('list',JSON.stringify(list))
+        window.history.back()
+    }
 </script>
 </body>
 </html>

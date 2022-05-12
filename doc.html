@@ -41,16 +41,16 @@
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/moment.js"></script>
 <script>
-  const list = JSON.parse(sessionStorage.getItem('list')) || []
+    const list = JSON.parse(sessionStorage.getItem('list')) || []
 
-  function deleteList(e,i){
-    $(e).parent().remove()
-    list.splice(i,1)
-    sessionStorage.setItem('list',JSON.stringify(list))
-  }
-  function init() {
-    for (let i = 0; i < list.length; i++) {
-      $('#list').append(`
+    function deleteList(e,i){
+        $(e).parent().remove()
+        list.splice(i,1)
+        sessionStorage.setItem('list',JSON.stringify(list))
+    }
+    function init() {
+        for (let i = 0; i < list.length; i++) {
+            $('#list').append(`
             <li>
                 <div>
                     <h1>${list[i].title}</h1>
@@ -63,13 +63,13 @@
                 <img src="img/delete.png" alt="" class="delete" onclick="deleteList(this,${i})">
             </li>
       `)
+        }
     }
-  }
 
 
-  $(function () {
-    init()
-  })
+    $(function () {
+        init()
+    })
 </script>
 </body>
 </html>
