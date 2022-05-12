@@ -1,0 +1,125 @@
+header {
+  height: 130px;
+  background: #121212;
+  padding: 0 30px; }
+  header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.logo {
+  height: 80px;
+  width: 80px; }
+
+.tools img {
+  height: 45px;
+  margin-left: 35px; }
+
+body {
+  background: #ededed; }
+
+.content {
+  width: 736px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.search-row {
+  height: 67px;
+  background: #F3F3F3;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  position: relative; }
+  .search-row .add {
+    position: absolute;
+    right: -70px;
+    top: 12px;
+    cursor: pointer; }
+  .search-row .search {
+    height: 30px;
+    cursor: pointer; }
+  .search-row input {
+    height: 100%;
+    flex: 1;
+    margin-left: 15px;
+    border: 0;
+    background: transparent;
+    font-size: 30px; }
+
+.list li {
+  padding: 15px 30px;
+  background: #F3F3F3;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .list li h1 {
+    font-size: 25px;
+    font-weight: 100;
+    color: #3A3A3C; }
+  .list li a {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #0075A3; }
+  .list li .delete {
+    height: 24px;
+    cursor: pointer; }
+
+.add-content {
+  width: 756px;
+  padding: 20px;
+  background: #EDEDED;
+  margin-top: 30px; }
+  .add-content h1 {
+    font-size: 24px;
+    color: #3a3a3c;
+    font-weight: 100; }
+  .add-content dl {
+    margin-top: 30px; }
+    .add-content dl dt {
+      font-size: 18px;
+      font-weight: 100;
+      color: #3A3A3C; }
+    .add-content dl dd {
+      margin-top: 10px;
+      display: flex;
+      align-items: center; }
+      .add-content dl dd input {
+        flex: 1;
+        height: 47px;
+        border: 0;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        background: #fff;
+        padding: 0 15px; }
+        .add-content dl dd input ~ input {
+          margin-left: 15px; }
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px; }
+  .btn-row div, .btn-row a {
+    font-size: 20px;
+    color: #fff;
+    height: 60px;
+    display: block;
+    width: 300px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #ACACAC;
+    border-radius: 15px; }
+    .btn-row div + div, .btn-row div + a, .btn-row a + div, .btn-row a + a {
+      background: #34C759; }
+
+/*# sourceMappingURL=index.css.map */

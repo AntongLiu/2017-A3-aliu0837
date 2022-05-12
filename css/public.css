@@ -1,0 +1,54 @@
+*{
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    border: none;
+}
+img{
+    border: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+.floatfix,.row{
+    zoom:1;
+}
+.floatfix:after,.row:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}

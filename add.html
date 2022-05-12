@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body style="background: #fff">
+<header>
+    <div class="container">
+        <img src="img/logo.png" alt="" class="logo">
+        <div class="tools">
+            <a href="#"><img src="img/icon1.png" alt=""></a>
+            <img src="img/icon2.png" alt="">
+        </div>
+    </div>
+</header>
+
+<div class="content add-content">
+    <h1>What I'm citing</h1>
+    <dl>
+        <dt>Article title</dt>
+        <dd>
+            <input type="text" id="title">
+        </dd>
+    </dl>
+    <dl>
+        <dt>Contributors</dt>
+        <dd>
+            <input type="text" placeholder="first name" id="firstName">
+            <input type="text" placeholder="Middle Name" id="middleName">
+            <input type="text" placeholder="Last Name" id="lastName">
+        </dd>
+    </dl>
+    <dl>
+        <dt>URL</dt>
+        <dd>
+            <input type="text" id="url">
+        </dd>
+    </dl>
+    <dl>
+        <dt>Date Published</dt>
+        <dd>
+            <input type="date" id="date">
+        </dd>
+    </dl>
+    <div class="btn-row">
+        <a href="doc.html">Cancel</a>
+        <div onclick="submit()">Save</div>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/moment.js"></script>
+<script>
+  function getValue(e){
+    return $(e).val()
+  }
+  function getParams(){
+    return {
+      title:getValue('#title'),
+      name:[getValue('#firstName'),getValue('#middleName'),getValue('#lastName')].join(' '),
+      url:getValue('#url'),
+      date:getValue('#date')
+    }
+  }
+
+  function submit() {
+    const list = JSON.parse(sessionStorage.getItem('list')) || []
+    list.push(getParams())
+    sessionStorage.setItem('list',JSON.stringify(list))
+    window.history.back()
+  }
+</script>
+</body>
+</html>
