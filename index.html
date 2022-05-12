@@ -13,6 +13,7 @@
         <div class="tools">
             <a href="#"><img src="img/icon1.png" alt=""></a>
             <img src="img/icon2.png" alt="">
+            <img src="img/use.png" alt="" onclick="setLogin()">
         </div>
     </div>
 </header>
@@ -112,11 +113,75 @@
     </div>
 </main>
 
+
+<div class="fixed login" style="display: none">
+    <div class="fixed-content">
+        <img src="img/clo.png" alt="" onclick="closeAll()" class="clos">
+        <h1>Log In</h1>
+        <p>
+            Don't have an account? <span onclick="setReg()">Create an account here.</span>
+        </p>
+        <dl class="input-row">
+            <dt>
+                <img src="img/ema.png" alt="">
+            </dt>
+            <dd><input type="text" placeholder="you email"></dd>
+        </dl>
+        <dl class="input-row">
+            <dt>
+                <img src="img/pas.png" alt="">
+            </dt>
+            <dd><input type="text" placeholder="you password"></dd>
+        </dl>
+        <button>Log In</button>
+    </div>
+</div>
+
+<div class="fixed reg" style="display: none">
+    <div class="fixed-content">
+        <img src="img/clo.png" alt="" onclick="closeAll()" class="clos">
+        <h1>Sign Up</h1>
+        <p>
+            Have an account? <span onclick="setLogin()">Login here.</span>
+        </p>
+        <dl class="input-row">
+            <dt>
+                <img src="img/user.png" alt="">
+            </dt>
+            <dd><input type="text" placeholder="you name"></dd>
+        </dl>
+        <dl class="input-row">
+            <dt>
+                <img src="img/ema.png" alt="">
+            </dt>
+            <dd><input type="text" placeholder="you email"></dd>
+        </dl>
+        <dl class="input-row">
+            <dt>
+                <img src="img/pas.png" alt="">
+            </dt>
+            <dd><input type="text" placeholder="you password"></dd>
+        </dl>
+        <button>Log In</button>
+    </div>
+</div>
+
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/index.js"></script>
 
 <script>
+    function closeAll(){
+        $(".fixed").hide()
+    }
+    function setReg(){
+        closeAll()
+        $('.reg').fadeIn()
+    }
+    function setLogin(){
+        closeAll()
+        $('.login').fadeIn()
+    }
     count.init()
 </script>
 </body>

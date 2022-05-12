@@ -194,4 +194,83 @@ main {
 .stop {
   background: rgba(255, 69, 58, 0.58); }
 
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 20vh; }
+
+.fixed-content {
+  margin: 0 auto;
+  width: 600px;
+  background: #fff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 35px;
+  position: relative; }
+.fixed-content h1 {
+  font-size: 48px;
+  font-weight: 100;
+  color: #3a3a3c; }
+.fixed-content p {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 20px;
+  color: #B9B9B9; }
+.fixed-content p span {
+  cursor: pointer;
+  color: #3482F7; }
+.fixed-content button {
+  background: #3482F7;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 40px;
+  color: #fff; }
+
+.input-row {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #EDEDED;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px; }
+.input-row dt {
+  flex: 0 0 60px;
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ccc; }
+.input-row dt img {
+  height: 25px; }
+.input-row dd {
+  flex: 1;
+  height: 100%;
+  padding: 0 10px; }
+.input-row dd input {
+  font-size: 20px;
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  outline: 0; }
+
+.clos {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  height: 35px; }
+
 /*# sourceMappingURL=index.css.map */

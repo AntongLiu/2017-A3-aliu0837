@@ -42,7 +42,7 @@ class Count extends Base{
       this.atom=this.atom.add(1, 's');
       this.timeStr = this.atom.format('mm:ss').split(':')
       this.render(this.el,this.timeStr)
-    },100)
+    },1000)
   }
 }
 
