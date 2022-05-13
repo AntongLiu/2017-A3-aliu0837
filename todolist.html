@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body style="background: #222">
+<div class="todolist">
+    <h1>To-Do</h1>
+    <a href="todoadd.html">
+        <img src="img/todoadd.png" alt="" class="todoadd">
+    </a>
+    <ul class="todoul">
+        <li id="u1">
+            <dl>
+                <dt>
+                    HIGH PRIORITY
+
+                    <div>
+                        <img src="img/tododown.png" alt="" class="down">
+                    </div>
+                </dt>
+                <dd>
+                    <div class="item">
+                        <div class="check"></div>
+                        <div class="info">
+                            <div class="title">Low-fidelity Prototype</div>
+                            <p>DECO2017_Assessment 1</p>
+                        </div>
+                        <div class="tips">
+                            <div class="time">5/4/2022 17:00</div>
+                            <img src="img/tododel.png" alt="">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </li>
+        <li id="u2">
+            <dl>
+                <dt>
+                    MEDIUM PRIORITY
+
+                    <div>
+                        <img src="img/tododown.png" alt="" class="down">
+                    </div>
+                </dt>
+                <dd>
+                    <div class="item">
+                        <div class="check"></div>
+                        <div class="info">
+                            <div class="title">Low-fidelity Prototype</div>
+                            <p>DECO2017_Assessment 1</p>
+                        </div>
+                        <div class="tips">
+                            <div class="time">5/4/2022 17:00</div>
+                            <img src="img/tododel.png" alt="">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </li>
+        <li id="u3">
+            <dl>
+                <dt>
+                    LOW PRIORITY
+
+                    <div>
+                        <img src="img/tododown.png" alt="" class="down">
+                    </div>
+                </dt>
+                <dd>
+                    <div class="item">
+                        <div class="check"></div>
+                        <div class="info">
+                            <div class="title">Low-fidelity Prototype</div>
+                            <p>DECO2017_Assessment 1</p>
+                        </div>
+                        <div class="tips">
+                            <div class="time">5/4/2022 17:00</div>
+                            <img src="img/tododel.png" alt="">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </li>
+        <li id="u4">
+            <dl>
+                <dt>
+                    COMPLETED
+
+                    <div>
+                        <img src="img/tododown.png" alt="" class="down">
+                    </div>
+                </dt>
+                <dd>
+                    <div class="item">
+                        <div class="check"><img src="img/todook.png" alt=""></div>
+                        <div class="info">
+                            <div class="title">Low-fidelity Prototype</div>
+                        </div>
+                        <div class="tips">
+                            <div class="time time2">5/4/2022 17:00</div>
+                            <img src="img/tododel.png" alt="">
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/lodash.js"></script>
+<script src="js/todo.js"></script>
+<script>
+    $(function (){
+        $("dt").click(function (){
+            $(this).find('.down').toggleClass('ace')
+            $(this).siblings('dd').slideToggle()
+        })
+
+        initItem()
+    })
+</script>
+</body>
+</html>

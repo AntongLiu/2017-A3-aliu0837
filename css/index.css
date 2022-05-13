@@ -1,5 +1,5 @@
 header {
-  height: 130px;
+  height: 100px;
   background: #121212;
   padding: 0 30px; }
 header .container {
@@ -9,12 +9,13 @@ header .container {
   justify-content: space-between; }
 
 .logo {
-  height: 80px;
-  width: 80px; }
+  height: 70px;
+  width: 70px; }
 
 .tools img {
   height: 45px;
-  margin-left: 35px; }
+  margin-left: 35px;
+  cursor: pointer; }
 
 body {
   background: #ededed; }
@@ -201,7 +202,8 @@ main {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  padding-top: 20vh; }
+  padding-top: 20vh;
+  z-index: 333; }
 
 .fixed-content {
   margin: 0 auto;
@@ -272,5 +274,63 @@ main {
   top: 35px;
   cursor: pointer;
   height: 35px; }
+
+.music {
+  position: fixed;
+  z-index: 2;
+  right: 50px;
+  bottom: 50px; }
+.music svg {
+  transition: .2s;
+  height: 50px;
+  cursor: pointer; }
+
+.setting {
+  position: fixed;
+  top: 100px;
+  width: 400px;
+  right: 0;
+  background: #222222; }
+.setting li {
+  background: #282828;
+  height: 50px;
+  padding: 0 20px;
+  margin: 5px 0; }
+.setting dl {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  justify-content: space-between; }
+.setting input {
+  width: 40px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-align: right;
+  font-size: 16px;
+  padding-right: 5px; }
+.setting input:focus {
+  color: #333;
+  background: #fff; }
+
+.todo {
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  z-index: 4; }
+.todo img {
+  width: 40px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5; }
+.todo iframe {
+  position: fixed;
+  border: none;
+  top: 100px;
+  left: 0;
+  z-index: 1;
+  width: 400px;
+  height: 600px; }
 
 /*# sourceMappingURL=index.css.map */

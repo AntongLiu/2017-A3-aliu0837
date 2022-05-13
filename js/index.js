@@ -1,3 +1,26 @@
+function closeAll(){
+  $(".fixed").hide()
+}
+function setReg(){
+  closeAll()
+  $('.reg').fadeIn()
+}
+function setLogin(){
+  closeAll()
+  $('.login').fadeIn()
+}
+
+function toggleMusic(e){
+  var audioObj = document.getElementById('audio');
+  if(audioObj.paused){
+    $(e).attr("fill", "green")
+    audioObj.play();
+  }else{
+    $(e).attr("fill", "#666")
+    audioObj.pause();
+  }
+}
+
 class Base{
   constructor() {
     this.timeEvent = null
@@ -24,6 +47,7 @@ class Count extends Base{
     this.toggle(this.index)
   }
   reset(){
+    $(".count.reset").hide()
     this.atom = moment.utc(0)
     this.timeStr = ['00','00']
     this.stop()
@@ -46,6 +70,10 @@ class Count extends Base{
   }
 }
 
+$("#to").click(function (){
+  $("#ifa").toggle()
+})
+
 class Pomodora extends Base{
   constructor() {
     super()
@@ -59,3 +87,7 @@ class Pomodora extends Base{
 
 const count = new Count()
 const pomodora = new Pomodora()
+
+function focusChagne(e){
+  config.focustime = e.value
+}

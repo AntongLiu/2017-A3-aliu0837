@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/todo.css">
+</head>
+<body style="background: #222">
+<div class="todolist">
+  <h1>To-Do</h1>
+  <div class="input">
+    <input type="text" id="title" placeholder="What would you like to do?">
+  </div>
+  <div class="input te">
+    <span>Description</span>
+    <textarea id="info"></textarea>
+  </div>
+  <div class="input">
+    <span>Priority Level</span>
+    <select id="level">
+      <option value="0">High</option>
+      <option value="1">Medium</option>
+      <option value="2">Low</option>
+    </select>
+  </div>
+  <div class="input">
+    <span>Due Date </span>
+    <input type="text" id="data" placeholder="dd/mm/yy">
+  </div>
+  <div class="input">
+    <span>Estimated Completion Time</span>
+    <input type="text" id="data2" placeholder="Hour : Min">
+  </div>
+  <div class="btnrow">
+    <a href="todolist.html" class="div">Cancel</a>
+    <div class="div" style="background: #34C759" onclick="saveItem()">Save</div>
+  </div>
+</div>
+
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/todo.js"></script>
+<script>
+  $(function (){
+    $("dt").click(function (){
+      $(this).find('.down').toggleClass('ace')
+      $(this).siblings('dd').slideToggle()
+    })
+  })
+</script>
+</body>
+</html>

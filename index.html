@@ -9,14 +9,28 @@
 <body style="background: #000">
 <header>
     <div class="container">
-        <img src="img/logo.png" alt="" class="logo">
+        <a href="index.html">
+            <img src="img/logo.png" alt="" class="logo">
+        </a>
         <div class="tools">
-            <a href="#"><img src="img/icon1.png" alt=""></a>
-            <img src="img/icon2.png" alt="">
+            <a href="doc.html"><img src="img/icon1.png" alt=""></a>
+            <img src="img/icon2.png" alt="" onclick="toggleSet()">
             <img src="img/use.png" alt="" onclick="setLogin()">
         </div>
     </div>
 </header>
+
+<ul class="setting" style="display: none">
+    <li><dl><dt>Focus Time Length</dt><dd><input type="text" onchange="focusChagne(this)" id="focustime">Min</dd></dl></li>
+    <li><dl><dt>Short Break Time</dt><dd><span id="s2"></span> Min</dd></dl></li>
+    <li><dl><dt>Long Break Time</dt><dd><span id="s3"></span> Min</dd></dl></li>
+    <li><dl><dt>Long Break Interval</dt><dd><span id="s4"></span> Focus</dd></dl></li>
+</ul>
+
+<div class="todo">
+    <img src="img/todo.png" alt="" id="to">
+    <iframe style="display: none" src="todolist.html" id="ifa"></iframe>
+</div>
 
 <main>
     <div class="nav">
@@ -59,8 +73,16 @@
                 </svg>
                 <div>00</div>
             </div>
-            <div class="btn" >
-                Start1
+            <div class="btn-box">
+                <div class="btn reset pomodoro" onclick="count.reset()" style="display: none">
+                    Reset
+                </div>
+                <div class="btn start pomodoro" onclick="count.start()">
+                    Start
+                </div>
+                <div class="btn stop pomodoro" onclick="count.stop()" style="display: none">
+                    Stop
+                </div>
             </div>
         </div>
         <div style="display: none">
@@ -113,7 +135,6 @@
     </div>
 </main>
 
-
 <div class="fixed login" style="display: none">
     <div class="fixed-content">
         <img src="img/clo.png" alt="" onclick="closeAll()" class="clos">
@@ -136,7 +157,6 @@
         <button>Log In</button>
     </div>
 </div>
-
 <div class="fixed reg" style="display: none">
     <div class="fixed-content">
         <img src="img/clo.png" alt="" onclick="closeAll()" class="clos">
@@ -166,23 +186,22 @@
     </div>
 </div>
 
+<div class="music">
+    <svg width="58" height="57" onclick="toggleMusic(this)" viewBox="0 0 58 57" fill="#666" xmlns="http://www.w3.org/2000/svg">
+        <path d="M36.92 0.925996C39.0461 -0.845766 42.2903 0.434453 42.6336 3.18065L42.969 5.86339C44.8248 20.7105 44.8248 35.7308 42.969 50.5779L42.6336 53.2607C42.2903 56.0069 39.0461 57.2871 36.92 55.5153L19.3531 40.8763C19.0386 40.6142 18.6422 40.4707 18.2328 40.4707H4.625C2.20875 40.4707 0.25 38.5119 0.25 36.0957V20.3457C0.25 17.9294 2.20875 15.9707 4.625 15.9707H18.2328C18.6422 15.9707 19.0386 15.8271 19.3531 15.565L36.92 0.925996Z" />
+        <path d="M54.613 14.0375C54.113 12.6767 52.6045 11.9789 51.2437 12.4789C49.8829 12.9789 49.1851 14.4873 49.6851 15.8481C51.1009 19.7014 51.875 23.8677 51.875 28.2206C51.875 31.8312 51.3424 35.3128 50.3533 38.5934C50.2981 38.7762 50.2416 38.9584 50.1837 39.1399C50.0276 39.6289 49.8613 40.1134 49.6851 40.5931C49.1851 41.9539 49.8829 43.4623 51.2437 43.9623C52.6045 44.4623 54.113 43.7645 54.613 42.4037C54.8152 41.8533 55.0061 41.2973 55.1852 40.7361C55.2516 40.5277 55.3165 40.3187 55.3798 40.1089C56.5155 36.3421 57.125 32.3502 57.125 28.2206C57.125 23.2408 56.2387 18.4621 54.613 14.0375Z"/>
+    </svg>
+    <audio src="bg.mp3" id="audio" style="display: none"></audio>
+</div>
+
+
 <script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/config.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/index.js"></script>
 
 <script>
-    function closeAll(){
-        $(".fixed").hide()
-    }
-    function setReg(){
-        closeAll()
-        $('.reg').fadeIn()
-    }
-    function setLogin(){
-        closeAll()
-        $('.login').fadeIn()
-    }
-    count.init()
+    pomodora.init()
 </script>
 </body>
 </html>
