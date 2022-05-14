@@ -40,7 +40,7 @@
     <div class="tab-con">
         <div>
             <div class="time-content" id="pomodoro">
-                <div>00</div>
+                <div>25</div>
                 <svg width="24" height="111" viewBox="0 0 24 111" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_i_724_25)">
                         <circle cx="12" cy="12.7793" r="12" fill="#B9B9B9"/>
@@ -72,16 +72,45 @@
                     </defs>
                 </svg>
                 <div>00</div>
+                <section class="cdk">
+                    <h1>Focus</h1>
+                    <p><b class="focus">0</b> / 4</p>
+                    <h1>Short Break</h1>
+                    <p><b id="break">0</b> / 3</p>
+                    <h1>Long Break</h1>
+                    <p><b id="long">0</b> / 1</p>
+                </section>
+            </div>
+            <div class="if">
+                Today has been focused <span class="focus">0</span> times
             </div>
             <div class="btn-box">
-                <div class="btn reset pomodoro" onclick="count.reset()" style="display: none">
-                    Reset
+                <div class="btn give pomodora init"  onclick="pomodora.give()" style="display: none;background: #4F4F4F">
+                    Give Up
                 </div>
-                <div class="btn start pomodoro" onclick="count.start()">
-                    Start
+                <div class="btn start pomodora init" onclick="pomodora.start('focus')">
+                    Start Focus
                 </div>
-                <div class="btn stop pomodoro" onclick="count.stop()" style="display: none">
+                <div class="btn stop pomodora init" onclick="pomodora.stop()" style="display: none">
                     Stop
+                </div>
+                <div class="btn give pomodora break"  onclick="pomodora.skipBreak()" style="display: none;background: #4F4F4F">
+                    Skip
+                </div>
+                <div class="btn start pomodora break" onclick="pomodora.start('break')" style="display: none">
+                    Start Short Break
+                </div>
+                <div class="btn stop pomodora break" onclick="pomodora.stop()" style="display: none">
+                    stop
+                </div>
+                <div class="btn give pomodora long"  onclick="pomodora.skipLong()" style="display: none;background: #4F4F4F">
+                    Skip
+                </div>
+                <div class="btn start pomodora long" onclick="pomodora.start('long')" style="display: none">
+                    Start Long Break
+                </div>
+                <div class="btn stop pomodora long" onclick="pomodora.stop()" style="display: none">
+                    stop
                 </div>
             </div>
         </div>
@@ -202,6 +231,7 @@
 
 <script>
     pomodora.init()
+    pomodora.initFocus()
 </script>
 </body>
 </html>

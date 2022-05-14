@@ -197,7 +197,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 60px;
   svg{
     margin: 0 73px;
@@ -405,5 +405,43 @@ main{
     z-index: 1;
     width: 400px;
     height: 600px;
+  }
+}
+
+.if{
+  font-size: 32px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  color: #F3F3F3;
+  text-align: center;
+  span{
+    color: #3482F7;
+    font-size: 60px ;
+    margin: 0 10px;
+  }
+  b{
+    font-weight: normal;
+    margin-left: 15px;
+  }
+}
+
+.time-content{
+  position: relative;
+}
+.cdk{
+  left: 50%;
+  position: absolute;
+  transform: translateX(440px);
+  h1{
+    color: #666;
+    font-size:18px;
+    margin-bottom: 10px;
+  }
+  p{
+    color: #fff;
+    margin-bottom: 10px;
   }
 }
