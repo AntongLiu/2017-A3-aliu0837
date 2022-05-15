@@ -228,8 +228,7 @@ class Pomodora extends Base {
     if (this.focus === 4) {
       this.initLong()
     } else {
-      console.log('f')
-      this.initBreak()
+      this.initFocus()
     }
   }
 

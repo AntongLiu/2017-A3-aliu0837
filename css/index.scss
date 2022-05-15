@@ -1,5 +1,5 @@
 header {
-  height: 100px;
+  height: 80px;
   background: #121212;
   padding: 0 30px;
 
@@ -12,13 +12,13 @@ header {
 }
 
 .logo {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 
 .tools {
   img {
-    height: 45px;
+    height: 40px;
     margin-left: 35px;
     cursor: pointer;
   }
@@ -163,7 +163,7 @@ body {
 }
 
 main{
-  margin-top: 80px;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -203,12 +203,12 @@ main{
     margin: 0 73px;
   }
   >div{
-    width: 312px;
-    height: 312px;
+    width: 250px;
+    height: 250px;
     background: #121212;
     border-radius: 60px;
-    font-size: 180px;
-    line-height: 312px;
+    font-size: 160px;
+    line-height: 250px;
     font-weight: 100;
     text-align: center;
     color: #ACACAC;
@@ -218,12 +218,12 @@ main{
 .btn{
   width: 318px;
   cursor: pointer;
-  height: 80px;
+  height: 60px;
   margin: 0 30px;
   color: #fff;
   text-align: center;
-  line-height: 80px;
-  font-size: 32px;
+  line-height: 60px;
+  font-size: 28px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
@@ -355,9 +355,10 @@ main{
 
 .setting{
   position: fixed;
-  top: 100px;
+  top: 80px;
   width: 400px;
   right: 0;
+  z-index: 88;
   background: #222222;
   li{
     background: #282828;
