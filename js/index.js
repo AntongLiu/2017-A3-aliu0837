@@ -311,6 +311,8 @@ class Pomodora extends Base {
       //Method of execution when time is reached
       if (this.timeStr[0] === '00' && this.timeStr[1] === '00') {
         clearInterval(this.timeEvent)
+        var bgg = document.getElementById('bgg');
+        bgg.play()
         //Method of determining the next round based on status and count
         switch (this.state) {
           case "focus":
