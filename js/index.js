@@ -264,7 +264,6 @@ class Pomodora extends Base {
 
   //If you have completed the four rounds of focused study, go to the long break
   give() {
-  give() {
     if (this.focus === 4) {
       this.initLong()
     } else {
@@ -272,7 +271,7 @@ class Pomodora extends Base {
     }
   }
 
-    //Increase the number of times depending on the status
+  //Increase the number of times depending on the status
   cdm() {
     switch (this.state) {
       case "focus":
@@ -299,7 +298,7 @@ class Pomodora extends Base {
     }
   }
 
-    //Start method
+  //Start method
   start(state) {
     this.state = state
     this.timeStr = this.atom.format('mm:ss').split(':')
@@ -340,8 +339,7 @@ const count = new Count()
 const pomodora = new Pomodora()
 
 function focusChagne(e) {
-    //Set item, if less than 10, make up 0
-  }
+  //Set item, if less than 10, make up 0
   if (e.value < 10) {
     e.value = '0' + e.value
   }
