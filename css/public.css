@@ -1,195 +1,54 @@
-.todolist{
-    padding: 20px;
-    position: relative;
-h1{
-    font-size:40px;
-    font-weight: 100;
-    color: #fff;
-    line-height: 1;
-    padding-left:50px;
-}
-.todoadd{
-    position: absolute;
-    cursor: pointer;
-    height: 40px;
-    right: 20px;
-    top: 20px;
-}
+*{
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.todoul{
-li{
-    margin-top: 20px;
+body {
+    font-family: "Microsoft YaHei", serif;
 }
-dt{
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    color:#f3f3f3;
-    font-size: 16px;
-    justify-content: space-between;
-div{
-    display: flex;
-    align-items: center;
-    font-size: 12px;
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    border: none;
 }
 img{
-    width: 13px;
-    margin-left: 10px;
+    border: none;
 }
-}
-}
-
-.todoul{
-li:nth-child(1){
-.check{
-    border: 3px solid #FF453A;
-}
-}
-li:nth-child(2){
-.check{
-    border: 3px solid #FF9F0A;
-}
-}
-li:nth-child(3){
-.check{
-    border: 3px solid #64D2FF;
-}
-~li{
-.check{
-    border: 3px solid #F3F3F3;
-    background: url("../img/todook.png") no-repeat;
-    background-size: 90%;
-    background-position: center center;
-}
-}
-}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.item{
-    padding: 10px;
-    background: #282828;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    display: flex;
-    margin-top: 15px;
-    align-items: flex-start;
-.check{
-    cursor: pointer;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-img{
-    width: 90%;
-}
-}
-.info{
-    flex:1;
-    padding: 0 15px;
-.title {
-    font-size: 16px;
-    color: #fff;
-    line-height: 1;
-}
-p{
-    color: #5A595E;
-    font-size: 14px;
-    margin-top: 10px;
-}
-}
-.tips{
-    text-align: right;
-.time{
-    font-size: 12px;
-    color: #3482F7;
-    margin-bottom: 10px;
-}
-.time2{
-    color: #ccc;
-}
-img{
-    cursor: pointer;
-    width: 15px;
-    display: inline-block;
-}
-}
+th, td {
+    text-align: left;
+    vertical-align: middle;
 }
 
-.down{
-    transition: .2s;
+img {
+    vertical-align: middle;
 }
-
-.ace{
-    transform: rotateZ(90deg);
+.floatfix,.row{
+    zoom:1;
 }
-
-
-.input{
-    background: #282828;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding:15px 10px;
-    margin-top: 20px;
-span{
-    flex: 0 0 80%;
-    font-size: 16px;
-    color: #F3F3F3;
+.floatfix:after,.row:after{
+    content:"";
+    display:table;
+    clear:both;
 }
-input{
-    flex:1;
-    min-width: 10px;
-    border: 0;
-    background: transparent;
-    outline: none;
-    color: #fff;
-    height: 100%;
+.left{
+    float: left;
 }
-select{
-    color: #3482F7;
-    border: 0;
-    background: transparent;
-    outline: none;
+.right{
+    float: right;
 }
-}
-
-.te{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-textarea{
-    height: 50px;
-    margin-top: 10px;
-    border: 0;
-    background: transparent;
-    outline: none;
-    color: #fff;
-    width: 100%;
-    resize: none;
-}
-}
-
-.btnrow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-.div{
-    margin: 0 20px;
-    width: 149px;
-    height: 58px;
-    background: #5A595E;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    color: #fff;
-    cursor: pointer;
-    line-height: 58px;
-    text-align: center;
-    font-size: 24px;
-}
+.container {
+    width: 1200px;
+    margin: 0 auto;
 }

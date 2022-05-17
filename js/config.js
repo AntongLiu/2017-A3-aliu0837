@@ -1,8 +1,10 @@
+//Contents of setting items
 const config = {
     focustime:25,
     short:5,
     longtime:30,
     longinterval:4,
+    //Setting item initialisation method
     init(){
         $("#focustime").val(config.focustime)
         $("#s2").text(config.short)
@@ -15,6 +17,7 @@ $(function (){
     config.init()
 })
 
+//Click to show hidden settings
 function toggleSet(){
     $(".setting").toggle()
 }
