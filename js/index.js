@@ -264,11 +264,12 @@ class Pomodora extends Base {
 
   //If you have completed the four rounds of focused study, go to the long break
   give() {
-    if (this.focus === 4) {
-      this.initLong()
-    } else {
-      this.initFocus()
-    }
+    window.location.reload()
+    // if (this.focus === 4) {
+    //   this.initLong()
+    // } else {
+    //   this.initFocus()
+    // }
   }
 
   //Increase the number of times depending on the status
